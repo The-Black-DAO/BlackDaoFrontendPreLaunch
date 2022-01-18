@@ -6,7 +6,7 @@ import commonSettings, { handleBackdropFilter } from "./global.js";
 // then set the values in darkTheme using the global color variables
 
 const darkTheme = {
-  color: "#FCFCFC",
+  color: "#ffffff",
   gold: "#FFB805",
   gray: "#FFB805",
   textHighlightColor: "#FFB805",

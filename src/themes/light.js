@@ -28,13 +28,13 @@ const lightTheme = {
   secondaryButtonHoverBG: "rgba(54, 56, 64, 1)",
   outlinedPrimaryButtonHoverBG: "#FFB805",
   outlinedPrimaryButtonHoverColor: "#333333",
-  outlinedSecondaryButtonHoverBG: "#FCFCFC",
+  outlinedSecondaryButtonHoverBG: "#ffffff",
   outlinedSecondaryButtonHoverColor: "#333333",
   containedSecondaryButtonHoverBG: "#33333333",
   graphStrokeColor: "rgba(37, 52, 73, .2)",
   gridButtonHoverBackground: "rgba(118, 130, 153, 0.2)",
   gridButtonActiveBackground: "rgba(118, 130, 153, 0.7)",
-  switchBg: "#FCFCFC",
+  switchBg: "#ffffff",
 };
 
 export const light = responsiveFontSizes(
@@ -229,7 +229,7 @@ export const light = responsiveFontSizes(
         },
         MuiButton: {
           containedPrimary: {
-            color: "#FCFCFC",
+            color: "#ffffff",
             backgroundColor: lightTheme.primaryButtonBG,
             "&:hover": {
               backgroundColor: lightTheme.primaryButtonHoverBG,
@@ -247,14 +247,14 @@ export const light = responsiveFontSizes(
             color: lightTheme.color,
             backgroundColor: lightTheme.paperBg,
             "&:hover": {
-              color: "#FCFCFC",
+              color: "#ffffff",
               backgroundColor: `${lightTheme.containedSecondaryButtonHoverBG} !important`,
             },
             "@media (hover:none)": {
               color: lightTheme.color,
               backgroundColor: lightTheme.paperBg,
               "&:hover": {
-                color: "#FCFCFC",
+                color: "#ffffff",
                 backgroundColor: `${lightTheme.containedSecondaryButtonHoverBG} !important`,
               },
             },
