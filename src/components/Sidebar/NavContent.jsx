@@ -13,8 +13,9 @@ import { ReactComponent as NewIcon } from "../../assets/icons/new-icon.svg";
 import { ReactComponent as WrapIcon } from "../../assets/icons/wrap.svg";
 import { ReactComponent as BridgeIcon } from "../../assets/icons/bridge.svg";
 import { ReactComponent as ArrowUpIcon } from "../../assets/icons/arrow-up.svg";
+import { ReactComponent as ClaimIcon } from "../../assets/icons/claim.svg";
 import { ReactComponent as CommingsoonIcon } from "../../assets/icons/commingsoon-icon.svg";
-
+import { ReactComponent as AuctionIcon } from "../../assets/icons/auction.svg";
 import { ReactComponent as ProIcon } from "../../assets/Olympus Logo.svg";
 import { Trans } from "@lingui/macro";
 import { trim } from "../../helpers";
@@ -296,7 +297,7 @@ function NavContent({ handleDrawerToggle }) {
                   )}
                   <Link>
                     <Typography variant="h6">
-                      <SvgIcon color="primary" component={StakeIcon} />
+                      <SvgIcon color="primary" component={ClaimIcon} />
                       <Trans>Claim</Trans>
                       <SvgIcon component={CommingsoonIcon} viewBox="21 -2 20 20" style={{ width: "80px" }} />
                     </Typography>
@@ -304,7 +305,7 @@ function NavContent({ handleDrawerToggle }) {
 
                   <Link>
                     <Typography variant="h6">
-                      <SvgIcon color="primary" component={StakeIcon} />
+                      <SvgIcon color="primary" component={AuctionIcon} />
                       <Trans>Auction</Trans>
                       <SvgIcon component={CommingsoonIcon} viewBox="21 -2 20 20" style={{ width: "80px" }} />
                     </Typography>

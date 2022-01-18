@@ -4,10 +4,10 @@ import commonSettings, { handleBackdropFilter } from "./global.js";
 
 const lightTheme = {
   color: "#253449",
-  gold: "#F8CC82",
+  gold: "#FFB805",
   gray: "#A3A3A3",
   blueish_gray: "#768299",
-  textHighlightColor: "#93AEBC", // "#F4D092",
+  textHighlightColor: "#93AEBC", // "#FFB805",
   backgroundColor: "#AFCDE9",
   // background:
   // "radial-gradient(circle at 25% 0%, rgba(227,255,240,.5), rgba(227,255,240,0) 50%), radial-gradient(circle at 80% 80%, rgba(131,165,203,.5), rgba(131,165,203,0) 50%)",
@@ -26,7 +26,7 @@ const lightTheme = {
   // these need fixing
   primaryButtonHoverColor: "#333333",
   secondaryButtonHoverBG: "rgba(54, 56, 64, 1)",
-  outlinedPrimaryButtonHoverBG: "#F8CC82",
+  outlinedPrimaryButtonHoverBG: "#FFB805",
   outlinedPrimaryButtonHoverColor: "#333333",
   outlinedSecondaryButtonHoverBG: "#FCFCFC",
   outlinedSecondaryButtonHoverColor: "#333333",
@@ -293,7 +293,7 @@ export const light = responsiveFontSizes(
             },
             "&:active": {
               color: lightTheme.gold,
-              borderBottom: "#F8CC82",
+              borderBottom: "#FFB805",
             },
           },
           textSecondary: {

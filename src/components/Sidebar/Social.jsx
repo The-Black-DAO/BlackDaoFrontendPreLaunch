@@ -7,19 +7,19 @@ import { ReactComponent as Discord } from "../../assets/icons/discord.svg";
 export default function Social() {
   return (
     <div className="social-row">
-      <Link href="https://github.com/OlympusDAO" target="_blank">
+      <Link href="https://github.com/The-Black-DAO" target="_blank">
         <SvgIcon color="primary" component={GitHub} />
       </Link>
 
-      <Link href="https://olympusdao.medium.com/" target="_blank">
+      <Link href="" target="_blank">
         <SvgIcon color="primary" component={Medium} />
       </Link>
 
-      <Link href="https://twitter.com/OlympusDAO" target="_blank">
+      <Link href="https://twitter.com/theblackdao" target="_blank">
         <SvgIcon color="primary" component={Twitter} />
       </Link>
 
-      <Link href="https://discord.gg/6QjjtUcfM4" target="_blank">
+      <Link href="https://discord.com/invite/N9JHyZjqK9" target="_blank">
         <SvgIcon color="primary" component={Discord} />
       </Link>
     </div>

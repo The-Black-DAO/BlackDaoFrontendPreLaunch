@@ -24,7 +24,7 @@ export const OHMPrice = () => {
   const marketPrice = useSelector(state => state.app.marketPrice);
   return (
     <Metric
-      label={t`OHM Price`}
+      label={t`BLKD Price`}
       metric={marketPrice && formatCurrency(marketPrice, 2)}
       isLoading={marketPrice ? false : true}
       {...sharedProps}
@@ -50,7 +50,7 @@ export const BackingPerOHM = () => {
   const backingPerOhm = useSelector(state => state.app.treasuryMarketValue / state.app.circSupply);
   return (
     <Metric
-      label={t`Backing per OHM`}
+      label={t`Backing per BLKD`}
       metric={!isNaN(backingPerOhm) && formatCurrency(backingPerOhm, 2)}
       isLoading={backingPerOhm ? false : true}
       {...sharedProps}
@@ -76,7 +76,7 @@ export const GOHMPrice = () => {
   return (
     <Metric
       className="metric wsoprice"
-      label={t`gOHM Price`}
+      label={t`sBLKD Price`}
       metric={gOhmPrice && formatCurrency(gOhmPrice, 2)}
       isLoading={gOhmPrice ? false : true}
       {...sharedProps}

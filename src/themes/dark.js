@@ -7,9 +7,9 @@ import commonSettings, { handleBackdropFilter } from "./global.js";
 
 const darkTheme = {
   color: "#FCFCFC",
-  gold: "#F8CC82",
+  gold: "#FFB805",
   gray: "#FFB805",
-  textHighlightColor: "#F4D092",
+  textHighlightColor: "#FFB805",
   backgroundColor: "rgba(8, 15, 53, 1)",
   background: `
     linear-gradient(180deg, rgba(8, 15, 53, 0), rgba(0, 0, 10, 0.9)),
@@ -25,18 +25,18 @@ const darkTheme = {
   popoverBg: "rgba(54, 56, 64, 0.99)",
   menuBg: handleBackdropFilter("rgba(54, 56, 64, 0.5)"),
   backdropBg: "rgba(54, 56, 64, 0.5)",
-  largeTextColor: "#F4D092",
+  largeTextColor: "#FFB805",
   activeLinkColor: "#F5DDB4",
   activeLinkSvgColor:
     "brightness(0) saturate(100%) invert(84%) sepia(49%) saturate(307%) hue-rotate(326deg) brightness(106%) contrast(92%)",
   primaryButtonColor: "#333333",
-  primaryButtonBG: "#F4D092",
+  primaryButtonBG: "#FFB805",
   primaryButtonHoverBG: "#EDD8B4",
   secondaryButtonHoverBG: "rgba(54, 56, 64, 1)",
-  outlinedPrimaryButtonHoverBG: "#F8CC82",
+  outlinedPrimaryButtonHoverBG: "#FFB805",
   outlinedPrimaryButtonHoverColor: "#333333",
   outlinedSecondaryButtonHoverBG: "transparent",
-  outlinedSecondaryButtonHoverColor: "#F8CC82", //gold
+  outlinedSecondaryButtonHoverColor: "#FFB805", //gold
   containedSecondaryButtonHoverBG: "rgba(255, 255, 255, 0.15)",
   graphStrokeColor: "rgba(255, 255, 255, .1)",
   gridButtonHoverBackground: "rgba(255, 255, 255, 0.6)",
@@ -110,7 +110,7 @@ export const dark = responsiveFontSizes(
         },
         MuiSelect: {
           select: {
-            color: "#F8CC82",
+            color: "#FFB805",
           },
         },
         MuiPaper: {
@@ -283,7 +283,7 @@ export const dark = responsiveFontSizes(
             },
             "&:active": {
               color: darkTheme.gold,
-              borderBottom: "#F8CC82",
+              borderBottom: "#FFB805",
             },
           },
           textSecondary: {
