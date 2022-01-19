@@ -161,8 +161,7 @@ function ChooseBondV2() {
           <div className="help-text">
             <em>
               <Typography variant="body2">
-                Important: New bonds are auto-staked (accrue rebase rewards) and no longer vest linearly. Simply claim
-                as sOHM or gOHM at the end of the term.
+              "Important: Bonds are auto-staked (accrue rebase rewards) and do not vest linearly. Simply claim as sBLKD or gBLKD at the end of the term.
               </Typography>
             </em>
           </div>

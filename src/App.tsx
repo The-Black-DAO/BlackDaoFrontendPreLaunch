@@ -319,6 +319,9 @@ function App() {
           </nav>
 
           <div className={`${classes.content} ${isSmallerScreen && classes.contentShift}`}>
+            <video className="sjdfhjdsfh" muted playsInline autoPlay loop controls>
+              <source src="./assets/BLK.mp4" type="video/mp4" />
+            </video>
             {oldAssetsDetected &&
               !hasActiveV1Bonds &&
               trimmedPath.indexOf("dashboard") === -1 &&

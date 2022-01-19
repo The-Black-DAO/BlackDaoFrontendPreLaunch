@@ -9,12 +9,12 @@ import { Trans } from "@lingui/macro";
 const externalUrls = [
   {
     title: <Trans>Forum</Trans>,
-    url: "https://forum.olympusdao.finance/",
+    url: "https://discord.com/invite/N9JHyZjqK9",
     icon: <SvgIcon color="primary" component={ForumIcon} />,
   },
   {
     title: <Trans>Governance</Trans>,
-    url: "https://vote.olympusdao.finance/",
+    url: "https://vote.blk.finance/#/theblackdao.eth",
     icon: <SvgIcon color="primary" component={GovIcon} />,
   },
   {
@@ -22,11 +22,11 @@ const externalUrls = [
     url: "https://docs.olympusdao.finance/",
     icon: <SvgIcon color="primary" component={DocsIcon} />,
   },
-  {
-    title: <Trans>Bug Bounty</Trans>,
-    url: "https://immunefi.com/bounty/olympus/",
-    icon: <SvgIcon color="primary" component={BugReportIcon} />,
-  },
+  // {
+  //   title: <Trans>Bug Bounty</Trans>,
+  //   url: "https://immunefi.com/bounty/olympus/",
+  //   icon: <SvgIcon color="primary" component={BugReportIcon} />,
+  // },
   // {
   //   title: "Feedback",
   //   url: "https://olympusdao.canny.io/",

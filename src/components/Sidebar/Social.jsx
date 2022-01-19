@@ -11,7 +11,7 @@ export default function Social() {
         <SvgIcon color="primary" component={GitHub} />
       </Link>
 
-      <Link href="" target="_blank">
+      <Link href="https://mirror.xyz/theblackdao.eth" target="_blank">
         <SvgIcon color="primary" component={Medium} />
       </Link>
 

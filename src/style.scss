@@ -15,7 +15,7 @@ body,
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
   background-color: #000 !important;
-  background-image: url("/assets/background-image.png");
+ // background-image: url("/assets/background-image.png");
 }
 
 body {
@@ -95,4 +95,9 @@ a:hover svg {
 
 .tooltip {
   z-index: 9999999;
+}
+.sjdfhjdsfh{
+  position: absolute;
+  height: 100%;
+  left: 0;
 }

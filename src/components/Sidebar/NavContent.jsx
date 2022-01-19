@@ -252,7 +252,8 @@ function NavContent({ handleDrawerToggle }) {
                   <Link>
                     <Typography variant="h6">
                       <SvgIcon color="primary" component={StakeIcon} />
-                      <Trans>BlackZap</Trans>
+                      <Trans>Zap</Trans>
+                      <SvgIcon component={CommingsoonIcon} viewBox="21 -2 20 20" style={{ width: "80px" }} />
                     </Typography>
                   </Link>
 
@@ -271,12 +272,7 @@ function NavContent({ handleDrawerToggle }) {
                       <SvgIcon component={ZapIcon} color="primary" />
                       <Typography variant="h6">OlyZaps</Typography>
                     </Box>
-                  </Link> */}
-
-                  {EnvHelper.isGiveEnabled(location.search) ? (
-                    <>
-                      <Link
-                        component={NavLink}
+                      component={NavLink}
                         id="give-nav"
                         to="/give"
                         isActive={(match, location) => {
@@ -284,6 +280,12 @@ function NavContent({ handleDrawerToggle }) {
                         }}
                         className={`button-dapp-menu ${isActive ? "active" : ""}`}
                         onClick={handleDrawerToggle}
+                  </Link> */}
+
+                  {EnvHelper.isGiveEnabled(location.search) ? (
+                    <>
+                      <Link
+                      
                       >
                         <Typography variant="h6">
                           <SvgIcon color="primary" component={GiveIcon} />
