@@ -19,7 +19,7 @@ const externalUrls = [
   },
   {
     title: <Trans>Docs</Trans>,
-    url: "https://docs.olympusdao.finance/",
+    url: "https://docs.blk.finance/",
     icon: <SvgIcon color="primary" component={DocsIcon} />,
   },
   // {

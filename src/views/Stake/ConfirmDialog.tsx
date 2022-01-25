@@ -27,7 +27,7 @@ export function ConfirmDialog({ quantity, currentIndex, view, onConfirm }: Confi
       <Box className="dialog-container" display="flex" alignItems="center" justifyContent="space-between">
         {/* <Typography variant="body2"> */}
         <Grid component="label" container alignItems="center" spacing={1} wrap="nowrap">
-          <Grid item>sOHM</Grid>
+          <Grid item>sBLKD</Grid>
           <Grid item>
             <Switch
               checked={checked}
@@ -38,9 +38,9 @@ export function ConfirmDialog({ quantity, currentIndex, view, onConfirm }: Confi
             />
           </Grid>
           <Grid item>
-            gOHM
+            gBLKD
             <InfoTooltip
-              message={`Toggle to switch between ${view === 0 ? "staking to" : "unstaking from"} sOHM or gOHM`}
+              message={`Toggle to switch between ${view === 0 ? "staking to" : "unstaking from"} sBLKD or gBLKD`}
               children={undefined}
             />
           </Grid>

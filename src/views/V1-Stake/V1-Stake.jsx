@@ -288,9 +288,9 @@ function V1Stake({ oldAssetsDetected, setMigrationModalOpen, hasActiveV1Bonds })
                           <Box className="help-text">
                             <Typography variant="body1" className="stake-note" color="textSecondary">
                               <>
-                                <Trans>First time unstaking</Trans> <b>sOHM</b>?
+                                <Trans>First time unstaking</Trans> <b>sBLKD</b>?
                                 <br />
-                                <Trans>Please approve Olympus Dao to use your</Trans> <b>sOHM </b>
+                                <Trans>Please approve Olympus Dao to use your</Trans> <b>sBLKD </b>
                                 <Trans> for unstaking</Trans>.
                               </>
                             </Typography>
@@ -397,7 +397,7 @@ function V1Stake({ oldAssetsDetected, setMigrationModalOpen, hasActiveV1Bonds })
                     <DataRow
                       title={`${t`Unstaked Balance`} (v1)`}
                       id="user-balance"
-                      balance={`${trim(Number(ohmBalance), 4)} OHM`}
+                      balance={`${trim(Number(ohmBalance), 4)} BLKD`}
                       isLoading={isAppLoading}
                     />
                     <Accordion className="stake-accordion" square>
@@ -405,43 +405,43 @@ function V1Stake({ oldAssetsDetected, setMigrationModalOpen, hasActiveV1Bonds })
                         <DataRow
                           title={t`Total Staked Balance`}
                           id="user-staked-balance"
-                          balance={`${trimmedBalance} sOHM`}
+                          balance={`${trimmedBalance} sBLKD`}
                           isLoading={isAppLoading}
                         />
                       </AccordionSummary>
                       <AccordionDetails>
                         <DataRow
-                          title={`${t`sOHM Balance`} (v1)`}
-                          balance={`${trim(Number(sohmBalance), 4)} sOHM`}
+                          title={`${t`sBLKD Balance`} (v1)`}
+                          balance={`${trim(Number(sohmBalance), 4)} sBLKD`}
                           indented
                           isLoading={isAppLoading}
                         />
                         {Number(fsohmBalance) > 0.00009 && (
                           <DataRow
-                            title={`${t`gOHM Balance in Fuse`}`}
-                            balance={`${trim(Number(fsohmBalance), 4)} gOHM`}
+                            title={`${t`gBLKD Balance in Fuse`}`}
+                            balance={`${trim(Number(fsohmBalance), 4)} gBLKD`}
                             indented
                             isLoading={isAppLoading}
                           />
                         )}
                         {Number(wsohmBalance) > 0.0 && (
                           <DataRow
-                            title={`${t`wsOHM Balance`} (v1)`}
-                            balance={`${trim(Number(wsohmBalance), 4)} wsOHM`}
+                            title={`${t`wsBLKD Balance`} (v1)`}
+                            balance={`${trim(Number(wsohmBalance), 4)} wsBLKD`}
                             isLoading={isAppLoading}
                             indented
                           />
                         )}
                         {Number(fiatDaowsohmBalance) > 0.00009 && (
                           <DataRow
-                            title={`${t`wsOHM Balance in FiatDAO`} (v1)`}
-                            balance={`${trim(Number(fiatDaowsohmBalance), 4)} wsOHM`}
+                            title={`${t`wsBLKD Balance in FiatDAO`} (v1)`}
+                            balance={`${trim(Number(fiatDaowsohmBalance), 4)} wsBLKD`}
                             isLoading={isAppLoading}
                             indented
                           />
                         )}
                         <DataRow
-                          title={`${t`sOHM Balance`} (v2)`}
+                          title={`${t`sBLKD Balance`} (v2)`}
                           balance={`${trim(Number(sohmV2Balance), 4)} sOHM`}
                           indented
                           isLoading={isAppLoading}

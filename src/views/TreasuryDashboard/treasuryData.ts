@@ -22,7 +22,7 @@ query {
     treasuryWETHMarketValue
     treasuryLusdRiskFreeValue
     treasuryLusdMarketValue
-    treasuryOtherMarketValue
+    // treasuryOtherMarketValue
     currentAPY
     runway10k
     runway20k

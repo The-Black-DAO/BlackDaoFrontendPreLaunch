@@ -46,13 +46,13 @@ function Wrap() {
   const { provider, address, connect, networkId } = useWeb3Context();
 
   const [zoomed, setZoomed] = useState(false);
-  const [assetFrom, setAssetFrom] = useState("sOHM");
-  const [assetTo, setAssetTo] = useState("gOHM");
+  const [assetFrom, setAssetFrom] = useState("sBLKD");
+  const [assetTo, setAssetTo] = useState("gBLKD");
   const [quantity, setQuantity] = useState("");
 
   const chooseCurrentAction = () => {
-    if (assetFrom === "sOHM") return "Wrap from";
-    if (assetTo === "sOHM") return "Unwrap from";
+    if (assetFrom === "sBLKD") return "Wrap from";
+    if (assetTo === "sBLKD") return "Unwrap from";
     return "Transform";
   };
   const currentAction = chooseCurrentAction();
@@ -97,11 +97,11 @@ function Wrap() {
   const isAvax = useMemo(() => networkId != 1 && networkId != 4 && networkId != -1, [networkId]);
 
   const wrapButtonText =
-    assetTo === "gOHM" ? (assetFrom === "wsOHM" ? "Migrate" : "Wrap") + " to gOHM" : `${currentAction} ${assetFrom}`;
+    assetTo === "gBLKD" ? (assetFrom === "wsBLKD" ? "Migrate" : "Wrap") + " to gBLKD" : `${currentAction} ${assetFrom}`;
 
   const setMax = () => {
-    if (assetFrom === "sOHM") setQuantity(sohmBalance);
-    if (assetFrom === "gOHM") setQuantity(gohmBalance);
+    if (assetFrom === "sBLKD") setQuantity(sohmBalance);
+    if (assetFrom === "gBLKD") setQuantity(gohmBalance);
   };
 
   const handleSwitchChain = id => {
@@ -111,8 +111,8 @@ function Wrap() {
   };
 
   const hasCorrectAllowance = useCallback(() => {
-    if (assetFrom === "sOHM" && assetTo === "gOHM") return wrapSohmAllowance > Number(sohmBalance);
-    if (assetFrom === "gOHM" && assetTo === "sOHM") return unwrapGohmAllowance > Number(gohmBalance);
+    if (assetFrom === "sBLKD" && assetTo === "gBLKD") return wrapSohmAllowance > Number(sohmBalance);
+    if (assetFrom === "gBLKD" && assetTo === "sBLKD") return unwrapGohmAllowance > Number(gohmBalance);
 
     return 0;
   }, [unwrapGohmAllowance, wrapSohmAllowance, assetTo, assetFrom, sohmBalance, gohmBalance]);
@@ -120,9 +120,9 @@ function Wrap() {
   const isAllowanceDataLoading = currentAction === "Unwrap";
   // const convertedQuantity = 0;
   const convertedQuantity = useMemo(() => {
-    if (assetFrom === "sOHM") {
+    if (assetFrom === "sBLKD") {
       return quantity / currentIndex;
-    } else if (assetTo === "sOHM") {
+    } else if (assetTo === "sBLKD") {
       return quantity * currentIndex;
     } else {
       return quantity;
@@ -158,27 +158,27 @@ function Wrap() {
   };
 
   const approveCorrectToken = () => {
-    if (assetFrom === "sOHM" && assetTo === "gOHM") approveWrap("sOHM");
-    if (assetFrom === "gOHM" && assetTo === "sOHM") approveWrap("gOHM");
+    if (assetFrom === "sBLKD" && assetTo === "gBLKD") approveWrap("sBLKD");
+    if (assetFrom === "gBLKD" && assetTo === "sBLKD") approveWrap("gBLKD");
   };
 
   const chooseCorrectWrappingFunction = () => {
-    if (assetFrom === "sOHM" && assetTo === "gOHM") wrapSohm();
-    if (assetFrom === "gOHM" && assetTo === "sOHM") unwrapGohm();
+    if (assetFrom === "sBLKD" && assetTo === "gBLKD") wrapSBLKD();
+    if (assetFrom === "gBLKD" && assetTo === "sBLKD") unwrapGohm();
   };
 
   const chooseInputArea = () => {
     if (!address || isAllowanceDataLoading) return <Skeleton width="150px" />;
     if (assetFrom === assetTo) return "";
-    if (!hasCorrectAllowance() && assetTo === "gOHM")
+    if (!hasCorrectAllowance() && assetTo === "gBLKD")
       return (
         <div className="no-input-visible">
-          First time wrapping to <b>gOHM</b>?
+          First time wrapping to <b>gBLKD</b>?
           <br />
           Please approve Olympus to use your <b>{assetFrom}</b> for this transaction.
         </div>
       );
-    else if (!hasCorrectAllowance() && assetTo === "sOHM")
+    else if (!hasCorrectAllowance() && assetTo === "sBLKD")
       return (
         <div className="no-input-visible">
           First time unwrapping <b>{assetFrom}</b>?
@@ -256,14 +256,14 @@ function Wrap() {
                     className="migrate-sohm-button"
                     style={{ textDecoration: "none" }}
                     href={
-                      assetTo === "wsOHM"
+                      assetTo === "wsBLKD"
                         ? "https://docs.olympusdao.finance/main/contracts/tokens#wsohm"
                         : "https://docs.olympusdao.finance/main/contracts/tokens#gohm"
                     }
                     aria-label="wsohm-wut"
                     target="_blank"
                   >
-                    <Typography>gOHM</Typography>{" "}
+                    <Typography>gBLKD</Typography>{" "}
                     <SvgIcon component={ArrowUp} color="primary" style={{ marginLeft: "5px", width: ".8em" }} />
                   </Link>
                 </div>
@@ -271,7 +271,7 @@ function Wrap() {
               <Grid item>
                 <MetricCollection>
                   <Metric
-                    label={`sOHM ${t`Price`}`}
+                    label={`sBLKD ${t`Price`}`}
                     metric={formatCurrency(sOhmPrice, 2)}
                     isLoading={sOhmPrice ? false : true}
                   />
@@ -281,10 +281,10 @@ function Wrap() {
                     isLoading={currentIndex ? false : true}
                   />
                   <Metric
-                    label={`gOHM ${t`Price`}`}
+                    label={`gBLKD ${t`Price`}`}
                     metric={formatCurrency(gOhmPrice, 2)}
                     isLoading={gOhmPrice ? false : true}
-                    tooltip={`gOHM = sOHM * index\n\nThe price of gOHM is equal to the price of sOHM multiplied by the current index`}
+                    tooltip={`gBLKD = sBLKD * index\n\nThe price of gBLKD is equal to the price of sBLKD multiplied by the current index`}
                   />
                 </MetricCollection>
               </Grid>
@@ -321,8 +321,8 @@ function Wrap() {
                               onChange={changeAsset}
                               disableUnderline
                             >
-                              <MenuItem value={"sOHM"}>sOHM</MenuItem>
-                              <MenuItem value={"gOHM"}>gOHM</MenuItem>
+                              <MenuItem value={"sBLKD"}>sBLKD</MenuItem>
+                              <MenuItem value={"gBLKD"}>gBLKD</MenuItem>
                             </Select>
                           </FormControl>
 
@@ -346,8 +346,8 @@ function Wrap() {
                               onChange={changeAsset}
                               disableUnderline
                             >
-                              <MenuItem value={"gOHM"}>gOHM</MenuItem>
-                              <MenuItem value={"sOHM"}>sOHM</MenuItem>
+                              <MenuItem value={"gBLKD"}>gBLKD</MenuItem>
+                              <MenuItem value={"sBLKD"}>sBLKD</MenuItem>
                             </Select>
                           </FormControl>
                         </>
@@ -362,19 +362,19 @@ function Wrap() {
                     <div className={`stake-user-data`}>
                       <>
                         <DataRow
-                          title={t`sOHM Balance`}
-                          balance={`${trim(sohmBalance, 4)} sOHM`}
+                          title={t`sBLKD Balance`}
+                          balance={`${trim(sohmBalance, 4)} sBLKD`}
                           isLoading={isAppLoading}
                         />
                         <DataRow
-                          title={t`gOHM Balance`}
-                          balance={`${trim(gohmBalance, 4)} gOHM`}
+                          title={t`gBLKD Balance`}
+                          balance={`${trim(gohmBalance, 4)} gBLKD`}
                           isLoading={isAppLoading}
                         />
                         <Divider />
                         <Box width="100%" align="center" p={1}>
                           <Typography variant="body1" style={{ margin: "15px 0 10px 0" }}>
-                            Got wsOHM on Avalanche or Arbitrum? Click below to switch networks and migrate to gOHM (no
+                            Got wsBLKD on Avalanche or Arbitrum? Click below to switch networks and migrate to gBLKD (no
                             bridge required!)
                           </Typography>
                           <Button

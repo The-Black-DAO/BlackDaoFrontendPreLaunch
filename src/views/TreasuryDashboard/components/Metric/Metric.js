@@ -63,10 +63,10 @@ export const CurrentIndex = () => {
   return (
     <Metric
       label={t`Current Index`}
-      metric={currentIndex && trim(currentIndex, 2) + " sOHM"}
+      metric={currentIndex && trim(currentIndex, 2) + " sBLKD"}
       isLoading={currentIndex ? false : true}
       {...sharedProps}
-      tooltip="The current index tracks the amount of sOHM accumulated since the beginning of staking. Basically, how much sOHM one would have if they staked and held a single OHM from day 1."
+      tooltip="The current index tracks the amount of sBLKD accumulated since the beginning of staking. Basically, how much sBLKD one would have if they staked and held a single BLKD from day 1."
     />
   );
 };
@@ -76,11 +76,11 @@ export const GOHMPrice = () => {
   return (
     <Metric
       className="metric wsoprice"
-      label={t`sBLKD Price`}
+      label={t`gBLKD Price`}
       metric={gOhmPrice && formatCurrency(gOhmPrice, 2)}
       isLoading={gOhmPrice ? false : true}
       {...sharedProps}
-      tooltip={`gOHM = sOHM * index\n\nThe price of gOHM is equal to the price of OHM multiplied by the current index`}
+      tooltip={`gBLKD = sBLKD * index\n\nThe price of gBLKD is equal to the price of BLKD multiplied by the current index`}
     />
   );
 };

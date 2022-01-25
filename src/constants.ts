@@ -19,7 +19,8 @@ import { getTokenPrice } from "./helpers";
 import { ethers } from "ethers";
 import { IERC20__factory, UniswapV2Lp__factory } from "./typechain";
 
-export const THE_GRAPH_URL = "https://api.thegraph.com/subgraphs/name/drondin/olympus-protocol-metrics";
+// export const THE_GRAPH_URL = "https://api.thegraph.com/subgraphs/name/drondin/olympus-protocol-metrics";
+export const THE_GRAPH_URL = "https://api.studio.thegraph.com/query/19881/black-dao/0.0.3";
 export const EPOCH_INTERVAL = 2200;
 
 // NOTE could get this from an outside source since it changes slightly over time
@@ -30,10 +31,11 @@ export const TOKEN_DECIMALS = 9;
 interface IPoolGraphURLS {
   [index: string]: string;
 }
-
+// 4: "https://api.thegraph.com/subgraphs/name/pooltogether/rinkeby-v3_4_3",
+// 1: "https://api.thegraph.com/subgraphs/name/pooltogether/pooltogether-v3_4_3",
 export const POOL_GRAPH_URLS: IPoolGraphURLS = {
-  4: "https://api.thegraph.com/subgraphs/name/pooltogether/rinkeby-v3_4_3",
-  1: "https://api.thegraph.com/subgraphs/name/pooltogether/pooltogether-v3_4_3",
+  4: "https://api.studio.thegraph.com/query/19881/black-dao/0.0.3",
+  1: "https://api.studio.thegraph.com/query/19881/black-dao/0.0.3",
 };
 
 export enum NetworkId {
@@ -59,16 +61,16 @@ interface IAddresses {
 
 export const addresses: IAddresses = {
   [NetworkId.TESTNET_RINKEBY]: {
-    DAI_ADDRESS: "0xB2180448f8945C8Cc8AE9809E67D6bd27d8B2f2C", // duplicate
-    OHM_ADDRESS: "0xC0b491daBf3709Ee5Eb79E603D73289Ca6060932",
-    STAKING_ADDRESS: "0xC5d3318C0d74a72cD7C55bdf844e24516796BaB2",
+    DAI_ADDRESS: "0xda4D6F9D4AdE1030F47F053EE31c963a743431a2", // duplicate
+    OHM_ADDRESS: "0xfC090226A7EbdC8B9Ea49fA6b9D686f2B7eCE98d",
+    STAKING_ADDRESS: "0xaEf0da0F747375f1E0B723e7e69555187C55e9c0",
     STAKING_HELPER_ADDRESS: "0xf73f23Bb0edCf4719b12ccEa8638355BF33604A1",
-    OLD_STAKING_ADDRESS: "0xb640AA9082ad720c60102489b806E665d67DCE32",
-    SOHM_ADDRESS: "0x1Fecda1dE7b6951B248C0B62CaeBD5BAbedc2084",
+    OLD_STAKING_ADDRESS: "0xaEf0da0F747375f1E0B723e7e69555187C55e9c0",
+    SOHM_ADDRESS: "0xbC48f6492C1419F154792285a4726BAafa486178",
     WSOHM_ADDRESS: "0xe73384f11Bb748Aa0Bc20f7b02958DF573e6E2ad",
     OLD_SOHM_ADDRESS: "0x8Fc4167B0bdA22cb9890af2dB6cB1B818D6068AE",
     MIGRATE_ADDRESS: "0x3b3eAa5269e876Fc629f396dcf8ce33E78c63F78",
-    DISTRIBUTOR_ADDRESS: "0x12ffF4bae57d25Aae3C662E4C97F58Ab52e1db56",
+    DISTRIBUTOR_ADDRESS: "0x92354A39dc9054dfd0B60e898Fd6a649E09039Ea",
     BONDINGCALC_ADDRESS: "0xaDBE4FA3c2fcf36412D618AfCfC519C869400CEB",
     CIRCULATING_SUPPLY_ADDRESS: "0x5b0AA7903FD2EaA16F1462879B71c3cE2cFfE868",
     TREASURY_ADDRESS: "0x0d722D813601E48b7DAcb2DF9bae282cFd98c6E7",
@@ -80,13 +82,13 @@ export const addresses: IAddresses = {
     MOCK_GIVING_ADDRESS: "0xfC93B6fC25D751ef1141EAB01C3f51Ecd484Ba05",
     MOCK_SOHM: "0x22C0b7Dc53a4caa95fEAbb05ea0729995a10D727",
     MIGRATOR_ADDRESS: "0x568c257BF4714864382b643fC8e6Ce5fbBcC6d3C",
-    GOHM_ADDRESS: "0x4c085C708d5029A52692520C4beEDdA1DCeB52C0",
-    OHM_V2: "0x0246d334602039eF5733e390becBf65585cF6395",
+    GOHM_ADDRESS: "0xff454B5c948A227Dd03b6afbAe5f1abdE4d0250B",
+    OHM_V2: "0xfC090226A7EbdC8B9Ea49fA6b9D686f2B7eCE98d",
     TREASURY_V2: "0xA725e738efa59A6C9DDaeAd0298eb50F98B31e58",
-    SOHM_V2: "0x3d0631A9463e65B67971BbB0769C2cF3f822a3a2",
-    STAKING_V2: "0xED5FbAeb5e0fD3e31f094406299CF0BD476f126f",
-    BOND_DEPOSITORY: "0x85ce3Cb653683C26d1Bb156a6bFF48915589374B",
-    DAO_TREASURY: "0xee1520f94f304e8d551cbf310fe214212e3ca34a",
+    SOHM_V2: "0xbC48f6492C1419F154792285a4726BAafa486178",
+    STAKING_V2: "0xaEf0da0F747375f1E0B723e7e69555187C55e9c0",
+    BOND_DEPOSITORY: "0x6AD7470b2F45e168C27995B5600Cd77DEF241b7a",
+    DAO_TREASURY: "0x7c1965732a4e42Ec2e551D9aec3b9A12dCF7Bf82",
   },
   [NetworkId.MAINNET]: {
     DAI_ADDRESS: "0x6b175474e89094c44da98b954eedeac495271d0f", // duplicate

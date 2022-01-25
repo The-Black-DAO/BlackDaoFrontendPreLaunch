@@ -192,7 +192,7 @@ function Stake() {
     if (confirmation === false && action === "unstake" && gweiValue.gt(ethers.utils.parseUnits(sohmBalance, "gwei"))) {
       return dispatch(
         error(
-          t`You do not have enough sOHM to complete this transaction.  To unstake from gOHM, please toggle the sohm-gohm switch.`,
+          t`You do not have enough sBLKD to complete this transaction.  To unstake from gBLKD, please toggle the sBLKD-gBLKD switch.`,
         ),
       );
     }
@@ -313,7 +313,7 @@ function Stake() {
                 <Metric
                   className="stake-index"
                   label={t`Current Index`}
-                  metric={`${formattedCurrentIndex} sOHM`}
+                  metric={`${formattedCurrentIndex} sBLKD`}
                   isLoading={currentIndex ? false : true}
                 />
               </MetricCollection>
@@ -362,17 +362,17 @@ function Stake() {
                               <Typography variant="body1" className="stake-note" color="textSecondary">
                                 {view === 0 ? (
                                   <>
-                                    <Trans>First time staking</Trans> <b>OHM</b>?
+                                    <Trans>First time staking</Trans> <b>BLKD</b>?
                                     <br />
-                                    <Trans>Please approve Olympus Dao to use your</Trans> <b>OHM</b>{" "}
+                                    <Trans>Please approve Black Dao to use your</Trans> <b>BLKD</b>{" "}
                                     <Trans>for staking</Trans>.
                                   </>
                                 ) : (
                                   <>
-                                    <Trans>First time unstaking</Trans> <b>{confirmation ? "gOHM" : "sOHM"}</b>?
+                                    <Trans>First time unstaking</Trans> <b>{confirmation ? "gBLKD" : "sBLKD"}</b>?
                                     <br />
-                                    <Trans>Please approve Olympus Dao to use your</Trans>{" "}
-                                    <b>{confirmation ? "gOHM" : "sOHM"}</b> <Trans>for unstaking</Trans>.
+                                    <Trans>Please approve Black Dao to use your</Trans>{" "}
+                                    <b>{confirmation ? "gBLKD" : "sBLKD"}</b> <Trans>for unstaking</Trans>.
                                   </>
                                 )}
                               </Typography>
@@ -420,7 +420,7 @@ function Stake() {
                                 {txnButtonText(
                                   pendingTransactions,
                                   "staking",
-                                  `${t`Stake to`} ${confirmation ? " gOHM" : " sOHM"}`,
+                                  `${t`Stake to`} ${confirmation ? " gBLKD" : " sBLKD"}`,
                                 )}
                               </Button>
                             ) : (
@@ -457,7 +457,7 @@ function Stake() {
                                 {txnButtonText(
                                   pendingTransactions,
                                   "unstaking",
-                                  `${t`Unstake from`} ${confirmation ? " gOHM" : " sOHM"}`,
+                                  `${t`Unstake from`} ${confirmation ? " gBLKD" : " sBLKD"}`,
                                 )}
                               </Button>
                             ) : (
@@ -467,7 +467,7 @@ function Stake() {
                                 color="primary"
                                 disabled={isPendingTxn(pendingTransactions, "approve_unstaking")}
                                 onClick={() => {
-                                  onSeekApproval(confirmation ? "gohm" : "sohm");
+                                  onSeekApproval(confirmation ? "gBLKD" : "sBLKD");
                                 }}
                               >
                                 {txnButtonText(pendingTransactions, "approve_unstaking", t`Approve`)}
@@ -488,7 +488,7 @@ function Stake() {
                     <DataRow
                       title={t`Unstaked Balance`}
                       id="user-balance"
-                      balance={`${trim(Number(ohmBalance), 4)} OHM`}
+                      balance={`${trim(Number(ohmBalance), 4)} BLKD`}
                       isLoading={isAppLoading}
                     />
                     <Accordion className="stake-accordion" square defaultExpanded>
@@ -496,27 +496,27 @@ function Stake() {
                         <DataRow
                           title={t`Total Staked Balance`}
                           id="user-staked-balance"
-                          balance={`${trimmedBalance} sOHM`}
+                          balance={`${trimmedBalance} sBLKD`}
                           isLoading={isAppLoading}
                         />
                       </AccordionSummary>
                       <AccordionDetails>
                         <DataRow
-                          title={t`sOHM Balance`}
-                          balance={`${trim(Number(sohmBalance), 4)} sOHM`}
+                          title={t`sBLKD Balance`}
+                          balance={`${trim(Number(sohmBalance), 4)} sBLKD`}
                           indented
                           isLoading={isAppLoading}
                         />
                         <DataRow
-                          title={`${t`gOHM Balance`}`}
-                          balance={`${trim(Number(gOhmBalance), 4)} gOHM`}
+                          title={`${t`gBLKD Balance`}`}
+                          balance={`${trim(Number(gOhmBalance), 4)} gBLKD`}
                           indented
                           isLoading={isAppLoading}
                         />
                         {Number(gOhmOnArbitrum) > 0.00009 && (
                           <DataRow
-                            title={`${t`gOHM (Arbitrum)`}`}
-                            balance={`${trim(Number(gOhmOnArbitrum), 4)} gOHM`}
+                            title={`${t`gBLKD (Arbitrum)`}`}
+                            balance={`${trim(Number(gOhmOnArbitrum), 4)} gBLKD`}
                             indented
                             {...{ isAppLoading }}
                           />
@@ -524,63 +524,63 @@ function Stake() {
                         {Number(gOhmOnAvax) > 0.00009 && (
                           <DataRow
                             title={`${t`gOHM (Avalanche)`}`}
-                            balance={`${trim(Number(gOhmOnAvax), 4)} gOHM`}
+                            balance={`${trim(Number(gOhmOnAvax), 4)} gBLKD`}
                             indented
                             {...{ isAppLoading }}
                           />
                         )}
                         {Number(gOhmOnPolygon) > 0.00009 && (
                           <DataRow
-                            title={`${t`gOHM (Polygon)`}`}
-                            balance={`${trim(Number(gOhmOnPolygon), 4)} gOHM`}
+                            title={`${t`gBLKD (Polygon)`}`}
+                            balance={`${trim(Number(gOhmOnPolygon), 4)} gBLKD`}
                             indented
                             {...{ isAppLoading }}
                           />
                         )}
                         {Number(gOhmOnFantom) > 0.00009 && (
                           <DataRow
-                            title={`${t`gOHM (Fantom)`}`}
-                            balance={`${trim(Number(gOhmOnFantom), 4)} gOHM`}
+                            title={`${t`gBLKD (Fantom)`}`}
+                            balance={`${trim(Number(gOhmOnFantom), 4)} gBLKD`}
                             indented
                             {...{ isAppLoading }}
                           />
                         )}
                         {Number(fgohmBalance) > 0.00009 && (
                           <DataRow
-                            title={`${t`gOHM Balance in Fuse`}`}
-                            balance={`${trim(Number(fgohmBalance), 4)} gOHM`}
+                            title={`${t`gBLKD Balance in Fuse`}`}
+                            balance={`${trim(Number(fgohmBalance), 4)} gBLKD`}
                             indented
                             isLoading={isAppLoading}
                           />
                         )}
                         {Number(sohmV1Balance) > 0.00009 && (
                           <DataRow
-                            title={`${t`sOHM Balance`} (v1)`}
-                            balance={`${trim(Number(sohmV1Balance), 4)} sOHM (v1)`}
+                            title={`${t`sBLKD Balance`} (v1)`}
+                            balance={`${trim(Number(sohmV1Balance), 4)} sBLKD (v1)`}
                             indented
                             isLoading={isAppLoading}
                           />
                         )}
                         {Number(wsohmBalance) > 0.00009 && (
                           <DataRow
-                            title={`${t`wsOHM Balance`} (v1)`}
-                            balance={`${trim(Number(wsohmBalance), 4)} wsOHM (v1)`}
+                            title={`${t`wsBLKD Balance`} (v1)`}
+                            balance={`${trim(Number(wsohmBalance), 4)} wsBLKD (v1)`}
                             isLoading={isAppLoading}
                             indented
                           />
                         )}
                         {Number(fiatDaowsohmBalance) > 0.00009 && (
                           <DataRow
-                            title={t`wsOHM Balance in FiatDAO (v1)`}
-                            balance={`${trim(Number(fiatDaowsohmBalance), 4)} wsOHM (v1)`}
+                            title={t`wsBLKD Balance in FiatDAO (v1)`}
+                            balance={`${trim(Number(fiatDaowsohmBalance), 4)} wsBLKD (v1)`}
                             isLoading={isAppLoading}
                             indented
                           />
                         )}
                         {Number(fsohmBalance) > 0.00009 && (
                           <DataRow
-                            title={t`sOHM Balance in Fuse (v1)`}
-                            balance={`${trim(Number(fsohmBalance), 4)} sOHM (v1)`}
+                            title={t`sBLKD Balance in Fuse (v1)`}
+                            balance={`${trim(Number(fsohmBalance), 4)} sBLKD (v1)`}
                             indented
                             isLoading={isAppLoading}
                           />
@@ -590,7 +590,7 @@ function Stake() {
                     <Divider color="secondary" />
                     <DataRow
                       title={t`Next Reward Amount`}
-                      balance={`${nextRewardValue} sOHM`}
+                      balance={`${nextRewardValue} sBLKD`}
                       isLoading={isAppLoading}
                     />
                     <DataRow

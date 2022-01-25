@@ -214,7 +214,7 @@ function WrapCrossChain() {
                   <Grid item xs={12} sm={4} md={4} lg={4}>
                     <div className="wrap-sOHM">
                       <Typography variant="h5" color="textSecondary">
-                        sOHM Price
+                        sBLKD Price
                       </Typography>
                       <Typography variant="h4">
                         {sOhmPrice ? formatCurrency(sOhmPrice, 2) : <Skeleton width="150px" />}
@@ -263,7 +263,7 @@ function WrapCrossChain() {
                     <Box style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
                       <Box height="32px">
                         <Typography>
-                          Transform <b>wsOHM</b> to <b>gOHM</b>
+                          Transform <b>wsBLKD</b> to <b>gBLKD</b>
                         </Typography>
                       </Box>
                     </Box>
@@ -276,13 +276,13 @@ function WrapCrossChain() {
                   </Box>
                   <div className={`stake-user-data`}>
                     <DataRow
-                      title={`${t`wsOHM Balance`} (${networkName})`}
-                      balance={`${trim(wsOhmBalance, 4)} wsOHM`}
+                      title={`${t`wsBLKD Balance`} (${networkName})`}
+                      balance={`${trim(wsOhmBalance, 4)} wsBLKD`}
                       isLoading={isAppLoading}
                     />
                     <DataRow
-                      title={`${t`gOHM Balance`} (${networkName})`}
-                      balance={`${trim(gohmBalance, 4)} gOHM`}
+                      title={`${t`gBLKD Balance`} (${networkName})`}
+                      balance={`${trim(gohmBalance, 4)} gBLKD`}
                       isLoading={isAppLoading}
                     />
                     <Divider />
