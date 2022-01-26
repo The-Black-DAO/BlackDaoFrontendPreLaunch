@@ -442,13 +442,13 @@ function V1Stake({ oldAssetsDetected, setMigrationModalOpen, hasActiveV1Bonds })
                         )}
                         <DataRow
                           title={`${t`sBLKD Balance`} (v2)`}
-                          balance={`${trim(Number(sohmV2Balance), 4)} sOHM`}
+                          balance={`${trim(Number(sohmV2Balance), 4)} sBLKD`}
                           indented
                           isLoading={isAppLoading}
                         />
                         <DataRow
-                          title={`${t`gOHM Balance`} (v2)`}
-                          balance={`${trim(Number(gOhmBalance), 4)} gOHM`}
+                          title={`${t`gBLKD Balance`} (v2)`}
+                          balance={`${trim(Number(gOhmBalance), 4)} gBLKD`}
                           indented
                           isLoading={isAppLoading}
                         />
@@ -457,7 +457,7 @@ function V1Stake({ oldAssetsDetected, setMigrationModalOpen, hasActiveV1Bonds })
                     <Divider color="secondary" />
                     <DataRow
                       title={t`Next Reward Amount`}
-                      balance={`${nextRewardValue} sOHM`}
+                      balance={`${nextRewardValue} sBLKD`}
                       isLoading={isAppLoading}
                     />
                     <DataRow

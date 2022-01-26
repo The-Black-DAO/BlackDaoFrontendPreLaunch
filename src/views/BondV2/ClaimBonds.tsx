@@ -108,8 +108,8 @@ function ClaimBonds({ activeNotes }: { activeNotes: IUserNote[] }) {
               aria-label="payout token tabs"
               className="payout-token-tabs"
             >
-              <Tab label={t`sOHM`} {...a11yProps(0)} className="payout-token-tab" />
-              <Tab label={t`gOHM`} {...a11yProps(1)} className="payout-token-tab" />
+              <Tab label={t`sBLKD`} {...a11yProps(0)} className="payout-token-tab" />
+              <Tab label={t`gBLKD`} {...a11yProps(1)} className="payout-token-tab" />
             </Tabs>
           </Box>
 
@@ -128,7 +128,7 @@ function ClaimBonds({ activeNotes }: { activeNotes: IUserNote[] }) {
                         Claimable Balance
                       </Typography>
                       <Typography variant="h4" align="center" style={{ marginBottom: "10px" }}>
-                        {view === 0 ? `${trim(totalClaimable, 4)} sOHM` : `${trim(totalClaimable, 4)} gOHM`}
+                        {view === 0 ? `${trim(totalClaimable, 4)} sBLKD` : `${trim(totalClaimable, 4)} gBLKD`}
                       </Typography>
 
                       <Button
@@ -194,7 +194,7 @@ function ClaimBonds({ activeNotes }: { activeNotes: IUserNote[] }) {
                     Claimable Balance
                   </Typography>
                   <Typography variant="h4" align="center" style={{ marginBottom: "10px" }}>
-                    {view === 0 ? `${trim(totalClaimable, 4)} sOHM` : `${trim(totalClaimable, 4)} gOHM`}
+                    {view === 0 ? `${trim(totalClaimable, 4)} sBLKD` : `${trim(totalClaimable, 4)} gBLKD`}
                   </Typography>
 
                   <Button

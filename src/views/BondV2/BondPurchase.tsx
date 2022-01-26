@@ -131,7 +131,7 @@ function BondPurchase({
                     <em>
                       <Typography variant="body1" align="center" color="textSecondary">
                         <Trans>First time bonding</Trans> <b>{bond.displayName}</b>? <br />{" "}
-                        <Trans>Please approve Olympus Dao to use your</Trans> <b>{bond.displayName}</b>{" "}
+                        <Trans>Please approve BLACK Dao to use your</Trans> <b>{bond.displayName}</b>{" "}
                         <Trans>for bonding</Trans>.
                       </Typography>
                     </em>
@@ -207,14 +207,14 @@ function BondPurchase({
               <Typography>
                 <Trans>You Will Get</Trans>
               </Typography>
-              <InfoTooltip message="Actual sOHM amount you receive will be higher at the end of the term due to rebase accrual."></InfoTooltip>
+              <InfoTooltip message="Actual sBLKD amount you receive will be higher at the end of the term due to rebase accrual."></InfoTooltip>
             </Box>
             <Typography id="bond-value-id" className="price-data">
               {isBondLoading ? (
                 <Skeleton width="100px" />
               ) : (
                 `${trim(Number(quantity) / bond.priceToken, 4) || "0"} ` +
-                `sOHM (≈${trim(+quantity / bond.priceToken / +currentIndex, 4) || "0"} gOHM)`
+                `sBLKD (≈${trim(+quantity / bond.priceToken / +currentIndex, 4) || "0"} gBLKD)`
               )}
             </Typography>
           </div>
@@ -224,7 +224,7 @@ function BondPurchase({
               <Trans>Max You Can Buy</Trans>
             </Typography>
             <Typography id="bond-value-id" className="price-data">
-              {isBondLoading ? <Skeleton width="100px" /> : `${trim(+bond.maxPayout / 10 ** 9, 1) || "0"} ` + `sOHM`}
+              {isBondLoading ? <Skeleton width="100px" /> : `${trim(+bond.maxPayout / 10 ** 9, 1) || "0"} ` + `sBLKD`}
             </Typography>
           </div>
 
