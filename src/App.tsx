@@ -341,7 +341,7 @@ function App() {
             </Route>
 
             <Route exact path="/">
-              <Redirect to="/stake" />
+              <Redirect to="/" />
             </Route>
 
             <Route path="/stake">

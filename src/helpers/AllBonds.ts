@@ -439,7 +439,7 @@ export const ohm_dai = new LPBond({
     },
   },
   lpUrl:
-    "https://app.sushi.com/add/0x64aa3364f17a4d01c6f1751fd97c2bd3d7e7f1d5/0x6b175474e89094c44da98b954eedeac495271d0f",
+    "https://app.sushi.com/add/0xe7DA1d8327AE1F320BbC23ca119b02AD3f85dceB/0x6b175474e89094c44da98b954eedeac495271d0f",
 });
 
 export const ohm_daiOld = new LPBond({
@@ -540,7 +540,7 @@ export const ohm_frax = new LPBond({
     },
   },
   lpUrl:
-    "https://app.uniswap.org/#/add/v2/0x64aa3364f17a4d01c6f1751fd97c2bd3d7e7f1d5/0x853d955acef822db058eb8505911ed77f175b99e",
+    "https://app.uniswap.org/#/add/v2/0xe7DA1d8327AE1F320BbC23ca119b02AD3f85dceB/0x853d955acef822db058eb8505911ed77f175b99e",
 });
 
 export const ohm_fraxOld = new LPBond({

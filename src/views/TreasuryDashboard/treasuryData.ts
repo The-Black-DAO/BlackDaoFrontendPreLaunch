@@ -16,17 +16,6 @@ query {
     treasuryMarketValue
     nextEpochRebase
     nextDistributedOhm
-    treasuryDaiRiskFreeValue
-    treasuryFraxMarketValue
-    treasuryDaiMarketValue
-    treasuryFraxRiskFreeValue
-    treasuryXsushiMarketValue
-    treasuryWETHMarketValue
-    treasuryLusdRiskFreeValue
-    treasuryLusdMarketValue
-    treasuryOtherMarketValue
-    treasuryWBTCMarketValue
-    treasuryUstMarketValue
     currentAPY
     runway10k
     runway20k
@@ -35,12 +24,24 @@ query {
     runway5k
     runway2dot5k
     runwayCurrent
-    treasuryOhmDaiPOL
-    treasuryOhmFraxPOL
+   
   }
 }
 `;
 
+// treasuryDaiRiskFreeValue
+//     treasuryFraxMarketValue
+//     treasuryDaiMarketValue
+//     treasuryFraxRiskFreeValue
+//     treasuryXsushiMarketValue
+//     treasuryWETHMarketValue
+//     treasuryLusdRiskFreeValue
+//     treasuryLusdMarketValue
+//     treasuryOtherMarketValue
+//     treasuryWBTCMarketValue
+//     treasuryUstMarketValue
+// treasuryOhmDaiPOL
+// treasuryOhmFraxPOL
 export const rebasesDataQuery = `
 query {
   rebases(where: {contract: "0x507a7Aa2A4a7A9fAeb045BdD6d0145e76c857AbC"}, orderBy: timestamp, first: 1000, orderDirection: desc) {

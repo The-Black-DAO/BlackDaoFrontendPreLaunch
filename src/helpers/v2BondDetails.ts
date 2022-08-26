@@ -146,7 +146,7 @@ export const v2BondDetails: { [key: number]: { [key: string]: V2BondDetails } } 
    // ["0x5ed8bd53b0c3fa3deabd345430b1a3a6a4e8bd7c"]: DaiDetails,
     [("0x03B40c5d740d6f4D76dDB484d7D4D9A0FD6202A5").toLowerCase()]: FraxDetails,
     [("0xc778417e063141139fce010982780140aa0cd5ab").toLowerCase()]: EthDetails,
-    // ["0xb2180448f8945c8cc8ae9809e67d6bd27d8b2f2c"]: CvxDetails, // we do not have CVX rinkeby in previous bonds
+     [("0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48").toLowerCase()]: CvxDetails, // we do not have CVX rinkeby in previous bonds
     [("0x97aa6b330967fc46Bd819535ae86701275a872d9").toLowerCase()]: OhmDaiDetails,
   },
   [NetworkId.MAINNET]: {
